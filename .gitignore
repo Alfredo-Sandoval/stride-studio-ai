@@ -172,3 +172,14 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+# ── Project-specific additions ────────────────────────────────
+
+# VS Code IntelliSense cache
+.vscode/PythonImportHelper-*-Completion.json
+
+# (Optional) local workspace settings
+.vscode/settings.json
+
+# Large model weights / checkpoints
+*.pt
+
