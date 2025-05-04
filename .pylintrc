@@ -1,0 +1,18 @@
+[MAIN]
+# Add PySide6 to the list of C extensions Pylint should be aware of.
+extension-pkg-whitelist=PySide6
+# Add the parent directory to sys.path so imports like 'from stride_studio...' work
+init-hook='import sys, os; sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))'
+
+[TYPECHECK]
+# List members that are often dynamically generated in PySide6 and can cause
+# 'no-member' or 'c-extension-no-member' errors.
+# Add specific signals, slots, or dynamic attributes if needed.
+ignore-on-opaque-inference=y
+ignored-classes=numpy,torch
+disable=E1101
+generated-members=PySide6.QtCore.Signal,PySide6.QtCore.Slot,PySide6.QtWidgets.*,PySide6.QtGui.*,PySide6.QtCore.*
+
+[FORMAT]
+# Allow lines up to 120 characters to avoid line-too-long warnings
+max-line-length=120

@@ -1,0 +1,23 @@
+name: Stride_Studio
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  # Core ML/GUI libraries
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.4
+  - pyyaml
+  - requests
+  # Essential pip packages for the app
+  - pip
+  - pip:
+      - opencv-python
+      - pyside6 >=6.7
+      - ultralytics
+      - matplotlib
+      - pandas
+      - seaborn
